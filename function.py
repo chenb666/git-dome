@@ -4,7 +4,7 @@ def calc (a,b):   #a,b称为形式参数，简称形参，形参的位置是在�
 result = calc(10,20)   #10,20称为实际参数，简称实参，实参的位置是在函数的调用处
 print(result)
 
-res = calc(b=10,a=20)   #等号左边的变量名称，称为关键字参数.
+res = calc(b=10,a=20)   #等号左边的变量名称，称为关键字参数..
 print(res)
 
 def fun(arg1,arg2):
