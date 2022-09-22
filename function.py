@@ -135,3 +135,66 @@ for i in range(1, 4):
             if i != j and i != k and j != k:
                 res += 1
 print(res)
+
+def fun6(a,b):
+    c = a + b   #c称为局部变量，因为c是在函数体内定义的变量，a，b为函数的形参，作用范围也是函数的内部，相当于函数的局部变量
+    print(c)
+# print(c)   因为a，c超出了函数起作用的范围（超出了作用域）
+
+name = '陈斌'   #name的作用范围为函数的内部和外部都可以使用，称为函数的全局变量
+print(name)
+def fun7():
+    print(name)
+# 调用函数
+fun7()
+
+def fun8():
+    global age   #函数内部定义的变量（局部变量），如果用global去声明，就变成了全局变量
+    age = 20
+    print(age)
+# 调用函数
+fun8()
+print(age)
+
+# 递归函数：
+# 如果在一个函数饿的函数体内调用了该函数本身，这个函数就称为递归函数
+# 递归函数的组成部分：递归调用和递归终止条件
+# 每递归调用一次都会在栈内存中分配一个栈帧；每执行完一次函数，都会释放相应的空间
+# 缺点：占用内存多，效率低下
+# 优点：思路和代码简单
+def fac(n):
+    if n==1:
+        return 1
+    else:
+        return n*fac(n-1)
+print(fac(6))
+
+
+def fac(n):
+    if n==1:
+        return 1
+    else:
+        res = n*fac(n-1)
+        return res
+print(fac(6))
+
+
+# 斐波那契数列：
+def fib(n):
+    if n == 1:
+        return 1
+    elif n==2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+# 斐波拉契数列第六位上的数字是：
+print(fib(6))
+# 输出斐波拉契数列前六位上的数字：
+for i in range(1,7):
+    print(fib(i))
+
+
+# lis = []
+# lis = input('请输入你的密码：')
+# lis.append()
+# print(lis)
